@@ -23,7 +23,6 @@ int main(int argc,char **argv)
 			if ((v.d = atoi(v.dd)) == 0)
 				error(4);
 			push();
-
 		}
 		else if (strcmp(v.tok,"pall") == 0)
 			pall();
@@ -48,13 +47,12 @@ void error(int a)
 	else if (a == 5)
 		fprintf(stderr,"Error: malloc failed\n");
 
-
+	fre();
 	exit(EXIT_FAILURE);
 }
 void push(void)
 {
 	stack_t *new;
-
 	new = malloc(sizeof(stack_t));
 	if (!new)
 		error(5);
@@ -74,16 +72,16 @@ void push(void)
 
 void pall(void)
 {
-	while(v.h)
+	stack_t *tmp = v.h;
+	while(tmp)
 	{
-		printf("%d\n",v.h->n);
-		v.h = v.h->next;
+		printf("%d\n",tmp->n);
+		tmp = tmp->next;
 	}
 }
 void fre(void)
 {
 	stack_t *tmp;
-
 	tmp = v.h;
 	while (v.h)
 	{
