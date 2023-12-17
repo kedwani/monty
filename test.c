@@ -16,6 +16,11 @@ int main(int argc,char **argv)
 	{
 		rmn();
 		v.tok = strtok(v.line," ");
+		if (v.tok == NULL)
+		{
+			++v.l;
+			continue;
+		}
 		if (strcmp(v.tok,"push") == 0)
 		{
 			if ((v.dd = strtok(NULL, " ")) == NULL)
