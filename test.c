@@ -46,7 +46,10 @@ void error(int a)
 		fprintf(stderr,"L%d: usage: push integer\n",v.l);
 	else if (a == 5)
 		fprintf(stderr,"Error: malloc failed\n");
-	fclose(v.ptr);
+	if (a != 1 && a != 2)
+		fclose(v.ptr);
+
+
 	fre();
 	exit(EXIT_FAILURE);
 }
