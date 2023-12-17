@@ -14,11 +14,13 @@ int main(int argc,char **argv)
 	v.l = 1;
 	while(fgets(v.line,sizeof(v.line),v.ptr) != NULL)
 	{
+		rmn();
 		v.tok = strtok(v.line," ");
-
 		if (strcmp(v.tok,"push") == 0)
 		{
-			if (!(v.d = atoi(strtok(NULL, " "))))
+			if ((v.dd = strtok(NULL, " ")) == NULL)
+				error(4);
+			if ((v.d = atoi(v.dd)) == 0)
 				error(4);
 			push();
 
@@ -29,6 +31,7 @@ int main(int argc,char **argv)
 		++v.l;
 	}
 	fclose(v.ptr);
+	fre();
 	return(0);
 }
 
@@ -76,4 +79,24 @@ void pall(void)
 		printf("%d\n",v.h->n);
 		v.h = v.h->next;
 	}
+}
+void fre(void)
+{
+	stack_t *tmp;
+
+	tmp = v.h;
+	while (v.h)
+	{
+		tmp = v.h->next;
+		free(v.h);
+		v.h = tmp;
+	}
+
+}
+void rmn(void)
+{
+	int i = 0;
+	for (;v.line[i] != '\0';++i)
+		if (v.line[i] == '\n')
+			v.line[i] = '\0';
 }

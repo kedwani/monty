@@ -41,6 +41,7 @@ typedef struct information
 	FILE *ptr;
 	char line[1024];
         char *tok;
+	char *dd;
 	int d;
 	int l;
 	int f;
@@ -57,6 +58,8 @@ typedef struct information
 void error(int a);
 void push(void);
 void pall(void);
+void fre(void);
+void rmn(void);
 
 
 #endif
