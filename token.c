@@ -65,6 +65,8 @@ void token(void)
 			swap();
 		else if (strcmp(v.tok, "add") == 0)
 			add();
+		else if (strcmp(v.tok, "sub") == 0)
+			sub();
 		else
 			error(3);
 		++v.l;
