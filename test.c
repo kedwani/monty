@@ -34,8 +34,8 @@ int main(int argc, char **argv)
 			v.dd = strtok(NULL, " ");
 			if (v.dd == NULL || strtok(NULL, " ") != NULL)
 				error(4);
-			v.d = atoi(v.dd);
-			if (v.d == 0)
+			v.d = strtol(v.dd, &v.t, 10);
+			if (v.t == NULL)
 				error(4);
 			push();
 		}
