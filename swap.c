@@ -7,7 +7,7 @@ void swap(void)
 		if (v.h->next->next)
 		{
 			v.h->next = v.h->next->next;
-			v.h->next->next->prev = v.h;
+			v.h->next->prev = v.h;
 		}
 		else
 			v.h->next = NULL;
