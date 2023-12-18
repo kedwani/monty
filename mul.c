@@ -4,12 +4,12 @@
  *
  * If the stack contains less than two elements, it triggers an error.
  *
- * Description:
- * - The top element is multiplied by the second element.
- * - The result replaces the second element, and the top element is removed.
- * - If successful, frees the memory of the removed top element.
+ * Dscription:
+ *  The top element is multiplied by the second element.
+ *  The result replaces the second element, and the top element is removed.
+ *  If successful, frees the memory of the removed top element.
  *
- * @note: This function handles insufficient stack elements.
+ * note: This function handles insufficient stack elements.
  */
 void mull(void)
 {

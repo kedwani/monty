@@ -1,4 +1,6 @@
 #include "monty.h"
+void poo(void);
+
 /**
  * token - Tokenizes Monty script lines and executes corresponding commands
  *
@@ -31,14 +33,10 @@
  */
 void token(void)
 {
-	int i;
-
 	v.l = 1;
 	while (fgets(v.line, sizeof(v.line), v.ptr) != NULL)
 	{
-		for (i = 0; v.line[i] != '\0'; ++i)
-			if (v.line[i] == '\n')
-				v.line[i] = '\0';
+		poo();
 		v.tok = strtok(v.line, " ");
 		if (v.tok == NULL || strcmp(v.tok, "nop") == 0 || v.tok[0] == '#')
 		{
@@ -73,9 +71,27 @@ void token(void)
 			mull();
 		else if (strcmp(v.tok, "mod") == 0)
 			mod();
-
 		else
 			error(3);
 		++v.l;
 	}
+}
+/**
+ * poo - Removes newline characters from a string stored in v.line.
+ *
+ * This function iterates through each character in the string v.line
+ * and replaces newline characters ('\n') with null terminators ('\0').
+ *
+ * note: This function modifies the content of the v.line string in place.
+ *
+ * notee: The modified string is expected to be a null-terminated string.
+ *        The loop terminates when the null terminator is encountered.
+ */
+void poo(void)
+{
+	int i;
+
+	for (i = 0; v.line[i] != '\0'; ++i)
+		if (v.line[i] == '\n')
+			v.line[i] = '\0';
 }

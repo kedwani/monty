@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
- * div - Divides the second element by the top element of the stack
+ * dev - Divides the second element by the top element of the stack
  *
- * Description:
+ * Dscription:
  * This function divides the value of the second element from the top of the
  * stack by the value at the top of the stack. If the stack contains fewer than
  * two elements, it prints an error message. If the top element is zero, it
