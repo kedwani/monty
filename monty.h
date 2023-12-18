@@ -64,6 +64,7 @@ void pint(void);
 void pop(void);
 void swap(void);
 void add(void);
+void sub(void);
 
 
 #endif

@@ -25,6 +25,8 @@ void error(int a)
 		fprintf(stderr, "L%d: can't swap, stack too short\n", v.l);
 	else if (a == 9)
 		fprintf(stderr, "L%d: can't add, stack too short\n", v.l);
+	else if (a == 10)
+		fprintf(stderr, "L%d: can't sub, stack too short\n", v.l);
 
 	if (a != 1 && a != 2)
 		fclose(v.ptr);
