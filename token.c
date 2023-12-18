@@ -11,7 +11,7 @@ void token(void)
 			if (v.line[i] == '\n')
 				v.line[i] = '\0';
 		v.tok = strtok(v.line, " ");
-		if (v.tok == NULL)
+		if (v.tok == NULL || strcmp(v.tok, "nop")
 		{
 			++v.l;
 			continue;
