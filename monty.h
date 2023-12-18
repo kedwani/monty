@@ -63,6 +63,9 @@ void fre(void);
 void rmn(void);
 void token(void);
 void pint(void);
+void pop(void);
+void swap(void);
+void add(void);
 
 
 #endif

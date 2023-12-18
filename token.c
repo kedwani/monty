@@ -26,10 +26,16 @@ void token(void)
 				error(4);
 			push();
 		}
-		else if (strcmp(v.tok, "pint") == 0)
-			pint();
 		else if (strcmp(v.tok, "pall") == 0)
 			pall();
+		else if (strcmp(v.tok, "pint") == 0)
+			pint();
+		else if (strcmp(v.tok, "pop") == 0)
+			pop();
+		else if (strcmp(v.tok, "swap") == 0)
+			swap();
+		else if (strcmp(v.tok, "add") == 0)
+			add();
 		else
 			error(3);
 		++v.l;
