@@ -32,6 +32,8 @@ void error(int a)
 		fprintf(stderr, "L%d: can't div, stack too short\n", v.l);
 	else if (a == 12)
 		fprintf(stderr, "L%d: division by zero\n", v.l);
+	else if (a == 13)
+		fprintf(stderr, "L%d: can't mul, stack too short\n", v.l);
 
 	if (a != 1 && a != 2)
 		fclose(v.ptr);

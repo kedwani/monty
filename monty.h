@@ -66,6 +66,7 @@ void swap(void);
 void add(void);
 void sub(void);
 void dev(void);
+void mull(void);
 
 
 #endif

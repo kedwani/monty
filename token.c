@@ -69,6 +69,8 @@ void token(void)
 			sub();
 		else if (strcmp(v.tok, "div") == 0)
 			dev();
+		else if (strcmp(v.tok, "mul") == 0)
+			mull();
 
 		else
 			error(3);
