@@ -16,7 +16,7 @@ void token(void)
 			++v.l;
 			continue;
 		}
-		if (strcmp(v.tok, "push") == 0)
+		else if (strcmp(v.tok, "push") == 0)
 		{
 			v.dd = strtok(NULL, " ");
 			if (v.dd == NULL)
@@ -26,12 +26,19 @@ void token(void)
 				error(4);
 			push();
 		}
+		else if (strcmp(v.tok, "pint") == 0)
+			pint();
 		else if (strcmp(v.tok, "pall") == 0)
 			pall();
 		else
 			error(3);
 		++v.l;
 	}
-
-
+}
+void pint(void)
+{
+	if (v.h)
+		printf("%d\n", v.h->n);
+	else
+		error(6);
 }
