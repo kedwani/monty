@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 		if (strcmp(v.tok, "push") == 0)
 		{
 			v.dd = strtok(NULL, " ");
-			if (v.dd == NULL)
+			if (v.dd == NULL || strtok(NULL, " ") != NULL)
 				error(4);
 			v.d = atoi(v.dd);
 			if (v.d == 0)
