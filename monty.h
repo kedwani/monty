@@ -61,6 +61,7 @@ void push(void);
 void pall(void);
 void fre(void);
 void rmn(void);
+void token(void);
 
 
 #endif
