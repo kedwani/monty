@@ -128,4 +128,5 @@ void fre(void)
 	{
 		tmp = v.h->next;
 		free(v.h);
-		v.h = tmp;	???
+		v.h = tmp
+		;	???
