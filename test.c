@@ -39,7 +39,7 @@ int main(int argc, char **argv)
 				error(4);
 			push();
 		}
-		else if (strcmp(v.tok, "pall") == 0)
+		else if (strcmp(v.tok, "pall") == 0 && !strtok(NULL, " "))
 			pall();
 		else
 			error(3);
