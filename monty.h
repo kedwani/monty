@@ -1,9 +1,9 @@
 #ifndef MONTY_H
 #define MONTY_H
 #include <stdio.h>
-#include <stdlib.h>
 #include <fcntl.h>
 #include <string.h>
+#include <stdlib.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -65,6 +65,7 @@ void pop(void);
 void swap(void);
 void add(void);
 void sub(void);
+void dev(void);
 
 
 #endif
