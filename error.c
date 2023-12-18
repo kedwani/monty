@@ -22,7 +22,7 @@ void error(int a)
 	else if (a == 7)
 		fprintf(stderr, "L%d: can't pop an empty stack\n",v.l);
 	else if (a == 8)
-		fprintf(stderr, "L%d: can't pint, stack empty\n",v.l);
+		fprintf(stderr, "L%d: can't swap, stack too short\n",v.l);
 	else if (a == 9)
 		fprintf(stderr, "L%d: can't pint, stack empty\n",v.l);
 
