@@ -8,7 +8,7 @@
  */
 int main(int argc, char **argv)
 {
-	int i ;
+	int i;
 
 	v.h = NULL;
 	if (argc != 2)
@@ -20,8 +20,7 @@ int main(int argc, char **argv)
 	v.l = 1;
 	while (fgets(v.line, sizeof(v.line), v.ptr) != NULL)
 	{
-		i = 0;
-		for (; v.line[i] != '\0'; ++i)
+		for (i = 0; v.line[i] != '\0'; ++i)
 			if (v.line[i] == '\n')
 				v.line[i] = '\0';
 		v.tok = strtok(v.line, " ");
@@ -32,9 +31,11 @@ int main(int argc, char **argv)
 		}
 		if (strcmp(v.tok, "push") == 0)
 		{
-			if ((v.dd = strtok(NULL, " ")) == NULL)
+			v.dd = strtok(NULL, " ");
+			if (v.dd == NULL)
 				error(4);
-			if ((v.d = atoi(v.dd)) == 0)
+			v.d = atoi(v.dd);
+			if (v.d == 0)
 				error(4);
 			push();
 		}
