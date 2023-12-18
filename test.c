@@ -8,7 +8,7 @@
  */
 int main(int argc, char **argv)
 {
-	int i = 0;
+	int i ;
 
 	v.h = NULL;
 	if (argc != 2)
@@ -20,6 +20,7 @@ int main(int argc, char **argv)
 	v.l = 1;
 	while (fgets(v.line, sizeof(v.line), v.ptr) != NULL)
 	{
+		i = 0;
 		for (; v.line[i] != '\0'; ++i)
 			if (v.line[i] == '\n')
 				v.line[i] = '\0';
