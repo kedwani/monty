@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 		if (strcmp(v.tok, "push") == 0)
 		{
 			v.dd = strtok(NULL, " ");
-			if (v.dd == NULL || strtok(NULL, " ") != NULL)
+			if (v.dd == NULL)
 				error(4);
 			v.d = strtol(v.dd, &v.t, 10);
 			if (*v.t != '\0')
