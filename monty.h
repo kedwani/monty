@@ -67,6 +67,7 @@ void add(void);
 void sub(void);
 void dev(void);
 void mull(void);
+void mod(void);
 
 
 #endif

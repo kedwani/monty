@@ -71,6 +71,8 @@ void token(void)
 			dev();
 		else if (strcmp(v.tok, "mul") == 0)
 			mull();
+		else if (strcmp(v.tok, "mod") == 0)
+			mod();
 
 		else
 			error(3);
