@@ -48,7 +48,7 @@ typedef struct information
 	stack_t *h;
 } info;
 
-
+info v;
 
 
 
