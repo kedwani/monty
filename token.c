@@ -1,5 +1,34 @@
 #include "monty.h"
-
+/**
+ * token - Tokenizes Monty script lines and executes corresponding commands
+ *
+ * Description:
+ * This function reads lines from the Monty script, tokenizes each line, and
+ * executes the corresponding Monty commands. Supported commands include:
+ *   - push: Pushes an integer onto the stack
+ *   - pall: Prints all elements of the stack
+ *   - pint: Prints the value at the top of the stack
+ *   - pop: Removes the top element of the stack
+ *   - swap: Swaps the top two elements of the stack
+ *   - add: Adds the top two elements of the stack
+ *   - nop: No operation (skips line)
+ * If script contains invalid or unknown commands, it prints an error message
+ * and exits the program.
+ *
+ * Global Variables:
+ * - v.l: Line number in the Monty script
+ * - v.line: Buffer to store a line from the Monty script
+ * - v.tok: Tokenized string obtained from strtok
+ * - v.dd: Temporary string for storing tokenized values
+ * - v.d: Integer value obtained from string conversion
+ * - v.t: Temporary string for miscellaneous purposes
+ * - v.ptr: File pointer to the Monty script
+ *
+ * Error Handling:
+ * If a command encounters an error (e.g., invalid argument for push, unknown
+ * command), it calls the error function to print an error message and exit the
+ * program.
+ */
 void token(void)
 {
 	int i;
@@ -40,11 +69,4 @@ void token(void)
 			error(3);
 		++v.l;
 	}
-}
-void pint(void)
-{
-	if (v.h)
-		printf("%d\n", v.h->n);
-	else
-		error(6);
 }

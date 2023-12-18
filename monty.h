@@ -16,44 +16,42 @@
  */
 typedef struct stack_s
 {
-        int n;
-        struct stack_s *prev;
-        struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
 
 /**
- * struct instruction_s - opcode and its function
- * @opcode: the opcode
- * @f: function to handle the opcode
+ * struct information - Structure to hold information for Monty interpreter
+ * @argv: Command-line argument (file name)
+ * @ptr: File pointer to the Monty script
+ * @line: Buffer to store a line from the Monty script
+ * @tok: Tokenized string obtained from strtok
+ * @dd: Temporary string for storing tokenized values
+ * @d: Integer value obtained from string conversion
+ * @l: Line number in the Monty script
+ * @h: Pointer to the head of the stack
+ * @t: Temporary string for miscellaneous purposes
  *
- * Description: opcode and its function
- * for stack, queues, LIFO, FIFO
+ * Description:
+ * This structure is used to hold various pieces of information needed for the
+ * Monty language interpreter. It includes details about the script file,
+ * individu lines, tokenization, numeric values, line numbers, stack handling,
+ * and additional temporary strings and flags.
  */
-typedef struct instruction_s
-{
-        char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
-} instruction_t;
-
 typedef struct information
 {
-        char *argv;
+	char *argv;
 	FILE *ptr;
 	char line[1024];
-        char *tok;
+	char *tok;
 	char *dd;
 	int d;
 	int l;
-	int f;
 	stack_t *h;
 	char *t;
 } info;
-
 info v;
-
-
-
-
 
 
 void error(int a);
