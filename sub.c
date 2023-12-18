@@ -23,5 +23,5 @@ void sub(void)
 		v.h->prev = NULL;
 	}
 	else
-		error(9);
+		error(10);
 }
