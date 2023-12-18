@@ -62,7 +62,7 @@ void error(int a)
 	else if (a == 2)
 		fprintf(stderr, "Error: Can't open file %s\n", v.argv);
 	else if (a == 3)
-		fprintf(stderr, "L%d: unknown instruction\n", v.l);
+		fprintf(stderr, "L%d: unknown instruction %s\n", v.l, v.tok);
 	else if (a == 4)
 		fprintf(stderr, "L%d: usage: push integer\n", v.l);
 	else if (a == 5)
